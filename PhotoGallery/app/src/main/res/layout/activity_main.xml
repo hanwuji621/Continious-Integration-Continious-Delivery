@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res‐auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivGallery"
+        android:layout_width="356dp"
+        android:layout_height="392dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/ivGallery"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="42dp"
+        android:text="timestamp"
+        android:textColor="#F00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+        <EditText
+            android:id="@+id/etCaption"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnPhoto"
+            android:layout_below="@+id/tvTimestamp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="61dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="NotSibling" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        >
+        <Button
+            android:id="@+id/btnPrev"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scrollPhotos"
+            android:text="prev"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btnPhoto"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="takePhoto"
+            android:text="@string/photo_button"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btnNext"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scrollPhotos"
+            android:text="next"
+            android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ivGallery"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:onClick="startSearch"
+            android:text="search"
+            tools:layout_editor_absoluteX="291dp"
+            tools:layout_editor_absoluteY="635dp" />
+    </LinearLayout>
+</RelativeLayout>
+
